@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/style.css" />
+    <title>ATM Machine</title>
+  </head>
+  <body>
+    <div class="container">
+      <form method="post">
+        Enter Your Pin Number:<input
+          type="text"
+          name="number"
+          id="number"
+          placeholder="Your Pin"
+        />
+        <input
+          type="button"
+          name="submit"
+          id="submit"
+          onclick="getAction()"
+          value="Enter"
+        />
+        <p id="demo"></p>
+
+        <div id="optVal" style="display: none">
+          <input
+            type="radio"
+            name="radio"
+            onclick="myFunction(this.value)"
+            value="1"
+          />Balance
+          <input
+            type="radio"
+            name="radio"
+            onclick="myFunction(this.value)"
+            value="2"
+          />Withdraw
+          <input
+            type="radio"
+            name="radio"
+            onclick="myFunction(this.value)"
+            value="3"
+          />FastCash
+        </div>
+        <p id="demo1" ,></p>
+
+        <div id="display" style="display: none">
+          <label>Enter Your Withdrawal Amount</label>
+          <input type="text" name="amount1" id="amount1" value="" />
+          <input
+            type="submit"
+            name="submit1"
+            value="submit"
+            onclick="getAmount()"
+          />
+        </div>
+
+        <div id="display1" style="display: none">
+          <label>Please Select Your FastCash Option</label>
+          <select id="myOptions">
+            <option value="10000">10_000</option>
+            <option value="20000">20_000</option>
+            <option value="50000">50_000</option>
+            <option value="7000">7_000</option>
+            <option value="11000">11_000</option>
+          </select>
+          <input
+            type="submit"
+            name="submit2"
+            value="submit"
+            onclick="getAmount1()"
+          />
+        </div>
+      </form>
+    </div>
+    <script src="/script.js"></script>
+  </body>
+</html>
